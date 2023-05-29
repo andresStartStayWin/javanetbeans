@@ -20,8 +20,12 @@ public class NewMain1 {
         
         Scanner leer = new Scanner(System.in);
         
+        System.out.println("Strng nomb leer next");
         String nombre = leer.next();
+        System.out.println("SaludoPer nombre");
         saludoPer(nombre);
+        
+        System.out.println("leer next");
         saludoPer(leer.next());
     }
     public static int suma(int a, int b){
