@@ -22,11 +22,12 @@ public class pag29ej10_4numeros {
         int multi;
         
         for (i=0; i < 4; i++) {
-            System.out.println("Ingrese un numero");
+            System.out.println("\nIngrese un numero"); // \n hace un Enter
             num = leer.nextInt();
             System.out.print(num);
+            int j;
                 //System.out.print("*");
-            for (i=0; i < num; i++) 
+            for (j=0; j < num; j++) 
                 System.out.print("*");
             
             }
