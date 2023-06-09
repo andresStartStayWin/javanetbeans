@@ -9,6 +9,7 @@ package andres.mascotapp.entidades;
  * @author andre
  */
 public class Mascota {
+
     public String nombre;
     public String apodo;
     //Conejo, Perro, Gato, Loro, Carpincho
@@ -17,5 +18,5 @@ public class Mascota {
     public int edad;
     public boolean cola;
     public String raza;
-    
+
 }

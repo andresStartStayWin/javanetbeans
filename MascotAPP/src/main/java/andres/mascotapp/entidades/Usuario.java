@@ -11,6 +11,7 @@ import java.util.Date;
  * @author andre
  */
 public class Usuario {
+
     public String nombre;
     public String apellido;
     public int dni;
