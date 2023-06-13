@@ -3,7 +3,10 @@
  */
 package andres.mascotapp;
 
+
+import java.util.Scanner;
 import andres.mascotapp.entidades.Mascota;
+
 
 /**
  *
@@ -13,16 +16,12 @@ public class MascotAPP {
 
     public static void main(String[] args) {
 
-        Mascota m1 = new Mascota();
+        Scanner leer = new Scanner(System.in);
+        
+        Mascota m1 = new Mascota("Fernando Chiquito", leer.next(), "Perro");
 
-        m1.apodo = "Chiquito";
-        m1.nombre = "Fernando Chiquito";
-        m1.tipo = "Perro";
-        m1.edad = 14;
-        m1.raza = "Beagle";
-        m1.cola = true;
-        m1.color = "Tricolor";
-
-        System.out.println(m1.apodo+" "+m1.edad+" "+m1.tipo);
+        m1.setNombre("Pepe Chiquito");
+        
+        System.out.println();
     }
 }
