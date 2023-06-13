@@ -47,4 +47,30 @@ public class Mascota {
             this.nombre = nombre;
         }
     }
+
+    public void setApodo(String apodo) {
+        this.apodo = apodo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setCola(boolean cola) {
+        this.cola = cola;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
+    
+    
 }
