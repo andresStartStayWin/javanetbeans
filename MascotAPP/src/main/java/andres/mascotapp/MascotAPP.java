@@ -18,11 +18,11 @@ public class MascotAPP {
 
         Scanner leer = new Scanner(System.in);
         
-        Mascota m1 = new Mascota("Fernando Chiquito", leer.next(), "Perro");
+        Mascota m1 = new Mascota("Fernando Chiquito", "Chiquito", "Perro");
 
         m1.setNombre("Pepe Chiquito");
         
-        System.out.println();
+        System.out.println(m1.toString());
     }
     
     

@@ -72,5 +72,42 @@ public class Mascota {
         this.raza = raza;
     }
     
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApodo() {
+        return apodo;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public boolean isCola() {
+        return cola;
+    }
+
+    public String getRaza() {
+        return raza;
+    }
+
+    @Override
+    public String toString() {
+        return "Mascota{" + "nombre=" + nombre + ", apodo=" + apodo + ", tipo=" + tipo + ", color=" + color + ", edad=" + edad + ", cola=" + cola + ", raza=" + raza + '}';
+    }
+
     
+     
+    
+    
+
 }
