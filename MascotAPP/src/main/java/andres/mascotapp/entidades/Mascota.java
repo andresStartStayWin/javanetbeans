@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package andres.mascotapp.entidades;
 
 /**
@@ -19,8 +15,10 @@ public class Mascota {
     private boolean cola;
     private String raza;
 
+    private int energia;
+    
     public Mascota() {
-        
+        this.energia = 1000;
     }
 
     public Mascota(String nombre, String apodo, String tipo) {
@@ -30,6 +28,7 @@ public class Mascota {
         if (tipo.equals("Perro") || tipo.equals("Gato") || tipo.equals("Loro") || tipo.equals("Conejo") || tipo.equals("Carpincho")) {
             this.tipo = tipo;
         }
+        this.energia = 1000;
     }
 
     public Mascota(String nombre, String apodo, String tipo, String color, int edad, boolean cola, String raza) {
@@ -40,6 +39,7 @@ public class Mascota {
         this.edad = edad;
         this.cola = cola;
         this.raza = raza;
+        this.energia = 1000;
     }
     
     public void setNombre(String nombre) {
@@ -100,12 +100,35 @@ public class Mascota {
         return raza;
     }
 
+    /**
+     * Funcion pasear 
+     * @param energiaRestar
+     * @return energia
+     */
+    public int pasear(int energiaRestar) {
+        energia -= energiaRestar;
+        return energia;
+    }   
+
+    /**
+     * Funcion pasear por vueltas
+     * @param energiaRestar
+     * @param vueltas
+     * @return energia
+     */
+    public int pasear(int energiaRestar, int vueltas) {
+        for (int i = 0; i < vueltas; i++) {
+            energia -= energiaRestar;     
+        }
+        return energia;
+    }   
+    
     @Override
     public String toString() {
-        return "Mascota{" + "nombre=" + nombre + ", apodo=" + apodo + ", tipo=" + tipo + ", color=" + color + ", edad=" + edad + ", cola=" + cola + ", raza=" + raza + '}';
+        return "Mascota{" + "nombre=" + nombre + ", apodo=" + apodo + ", tipo=" + tipo + ", color=" + color + ", edad=" + edad + ", cola=" + cola + ", raza=" + raza + ", energia=" + energia + '}';
     }
-
-    
+        
+   
      
     
     

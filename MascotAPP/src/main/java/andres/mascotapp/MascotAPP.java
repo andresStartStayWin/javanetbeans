@@ -22,6 +22,8 @@ public class MascotAPP {
 
         m1.setNombre("Pepe Chiquito");
         
+        m1.pasear(100);
+        
         System.out.println(m1.toString());
     }
     
