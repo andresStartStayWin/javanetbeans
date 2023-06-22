@@ -21,6 +21,13 @@ public class Libro {
     this.numPaginas = 50;
     }
 
+    public Libro() {
+    }
+    
+    
+    
+    
+
     @Override
     public String toString() {
         return "Libro{" + "ISBN=" + ISBN + ", Titulo=" + Titulo + ", Autor=" + Autor + ", numPaginas=" + numPaginas + '}';

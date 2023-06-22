@@ -1,7 +1,7 @@
 package andres.mascotapp.entidades;
 
 /**
- *
+ * MascotAPP
  * @author andre
  */
 public class Mascota {
