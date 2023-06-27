@@ -36,16 +36,22 @@ public class Ejercicio3 {
             switch (opcion) {
                 case 1:
                     System.out.println("La suma es " + ServOp.sumar(op1.getN1(), op1.getN2()));
+                    break;
                 case 2:
                     System.out.println("La resta es " + ServOp.restar(op1.getN1(), op1.getN2()));
+                    break;
                 case 3:
                     System.out.println("La multiplicacion es " + ServOp.multiplicar(op1.getN1(), op1.getN2()));
+                    break;
                 case 4:
                     System.out.println("La division es " + ServOp.dividir(op1.getN1(), op1.getN2()));
+                    break;
                 case 5:
                     System.out.println("Usted salió");
+                    break;
                 default:
                     System.out.println("Opcion no valida");
+                    break;
            }
             
         } while (opcion != 5);

@@ -34,14 +34,19 @@ public class Ejercicio4 {
             switch (opcion) {
                 case 1:
                     System.out.println("La superficie es " + rec1.calcularSuperficie(op1.getBase(), op1.getAltura()));
+                    break;
                 case 2:
                     System.out.println("El perimetro es " + rec1.calcularPerimetro(op1.getBase(), op1.getAltura()));
+                    break;
                 case 3:
                     rec1.dibujarRectangunlo(op1.getAltura(), op1.getBase());
+                    break;
                 case 4:
                     System.out.println("Usted salió");
+                    break;
                 default:
                     System.out.println("Opcion invalida");
+                    break;
             }
         } while (opcion != 4);
         
