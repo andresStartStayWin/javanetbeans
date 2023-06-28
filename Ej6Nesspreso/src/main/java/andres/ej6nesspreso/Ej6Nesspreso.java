@@ -52,13 +52,17 @@ public class Ej6Nesspreso {
         
         switch (opcion) {
             case 1:
-                ServCaf.servirTasa(cafe);
+                ServCaf.servirTaza(cafe);
+                break;
             case 2:
                 ServCaf.vaciarCafetera(cafe);
+                break;
             case 3:
                 ServCaf.agregarCafe(cafe);
+                break;
             case 4:
                 System.out.println("salió");
+                break;
             default:
                 System.out.println("la opcion es incorrecta");
                 
