@@ -4,6 +4,10 @@
 
 package andres.ej6nesspreso;
 
+import Entidades.Cafetera;
+import Servicios.ServiciosCafetera;
+import java.util.Scanner;
+
 /**
  *Programa Nespresso. Desarrolle una clase Cafetera con los atributos capacidadMaxima
 (la cantidad máxima de café que puede contener la cafetera) y cantidadActual (la
@@ -26,8 +30,40 @@ recibe y se añade a la cafetera la cantidad de café indicada.
  * @author andre
  */
 public class Ej6Nesspreso {
+    
+    public static Scanner leer = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        ServiciosCafetera ServCaf = new ServiciosCafetera();
+        Cafetera cafe = ServCaf.crearCafetera();
+        
+        int opcion;
+        
+        System.out.println("1.Servir una taza");
+        System.out.println("2.Vaciar cafetera");
+        System.out.println("3.Agregar Café");
+        System.out.println("4.Salir");
+        
+    do {
+        System.out.println("Ingrese la opción");
+        
+        opcion = leer.nextInt();
+        
+        switch (opcion) {
+            case 1:
+                ServCaf.servirTasa(cafe);
+            case 2:
+                ServCaf.vaciarCafetera(cafe);
+            case 3:
+                ServCaf.agregarCafe(cafe);
+            case 4:
+                System.out.println("salió");
+            default:
+                System.out.println("la opcion es incorrecta");
+                
+        }
+    } while (opcion != 4);
+        
     }
 }
