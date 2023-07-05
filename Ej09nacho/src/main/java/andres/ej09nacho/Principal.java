@@ -22,7 +22,7 @@ public class Principal {
 
         System.out.println("Generando objeto 'Matematica'...\n");
 
-        Matematica matematica = matSer.crearMatematica();
+         Matematica matematica = matSer.crearMatematica();
 
         System.out.println("El objeto creado es: " + matematica.toString() + "\n");
 
