@@ -12,7 +12,7 @@ import java.util.Date;
  * @author andre
  */
 public class Alquiler {
-        private PeliculaServicio pelSer;
+    private PeliculaServicio pelSer;
     private Date inicio, fin;
     private static int precio = 10;
 

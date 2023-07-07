@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Ej8Cadena {
     static final Scanner leer = new Scanner(System.in).useDelimiter("\n");
     public static void main(String[] args) {
-             ServiciosCadena serv1 = new ServiciosCadena();
+        ServiciosCadena serv1 = new ServiciosCadena();
 
         Cadena c1 = serv1.crearCadena();
 

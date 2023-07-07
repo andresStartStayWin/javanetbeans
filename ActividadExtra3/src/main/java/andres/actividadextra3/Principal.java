@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author andre
  */
 public class Principal {
- private static Scanner input = new Scanner(System.in);
+    private static Scanner input = new Scanner(System.in);
     private static PeliculaServicio[] pelSer = new PeliculaServicio[5];
     private static AlquilerServicio[] alqSer = new AlquilerServicio[5];
     
