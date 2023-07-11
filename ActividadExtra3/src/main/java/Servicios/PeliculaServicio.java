@@ -8,7 +8,7 @@ import Entidades.Pelicula;
 import java.util.Scanner;
 
 /**
- *
+ * 
  * @author andre
  */
 public class PeliculaServicio {
