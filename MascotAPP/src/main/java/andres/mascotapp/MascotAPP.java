@@ -3,20 +3,10 @@
  */
 package andres.mascotapp;
 
-
-import java.util.Scanner;
-import andres.mascotapp.entidades.Mascota;
-
-
 /**
  *
  * @author andre
- */
-public class MascotAPP {
-
-    public static void main(String[] args) {
-
-        Scanner leer = new Scanner(System.in);
+ *  Scanner leer = new Scanner(System.in);
         
         Mascota m1 = new Mascota("Fernando Chiquito", "Chiquito", "Perro");
 
@@ -25,6 +15,12 @@ public class MascotAPP {
         m1.pasear(100);
         
         System.out.println(m1.toString());
+ */
+public class MascotAPP {
+
+    public static void main(String[] args) {
+
+       String[] nombresArray = new String[5];
     }
     
     
