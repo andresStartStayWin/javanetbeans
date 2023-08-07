@@ -3,6 +3,7 @@
  */
 package andres.mascotapp;
 
+import andres.mascotapp.Servicios.ServicioMascotas;
 import java.util.ArrayList;
 
 /**
@@ -21,7 +22,17 @@ import java.util.ArrayList;
 public class MascotAPP {
 
     public static void main(String[] args) {
-/*
+
+        ServicioMascotas servMasc = new ServicioMascotas();
+        
+       servMasc.fabricaMascota(2);
+       
+       servMasc.mostrarMascotas();
+        
+        
+        
+        
+        /*
        String[] nombresArray = new String[5];
        
         for (int i = 0; i < nombresArray.length; i++) {
@@ -33,7 +44,7 @@ public class MascotAPP {
             System.out.println(var);
             
         }
-*/
+
 
     ArrayList<String> nombresArrayList = new ArrayList();
 
@@ -46,7 +57,7 @@ public class MascotAPP {
         
         nombresArrayList.remove("Chiquito");
         System.out.println(nombresArrayList.size());
-        
+        */
 }
     
     

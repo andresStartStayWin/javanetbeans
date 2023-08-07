@@ -14,15 +14,16 @@ import java.util.Scanner;
  * @author andre
  */
 public class ServicioMascotas {
-    private Scanner leer = new Scanner(System.in).useDelimiter("\n");
+    private Scanner leer;
     
-    private List<String> mascotas;
+    private List<Mascota> mascotas;
      
     public ServicioMascotas() {
+        this.leer = new Scanner(System.in).useDelimiter("\n");
         this.mascotas = new ArrayList();
     }
             
-    public void crearMascota() {
+    public Mascota crearMascota() {
         System.out.println("nombre");
         String nombre = leer.next();
         
@@ -31,20 +32,40 @@ public class ServicioMascotas {
         
         System.out.println("tipo");
         String tipo = leer.next();
+              
+        Mascota m = new Mascota(nombre, apodo, tipo);   
         
-        String mascota = nombre+" "+apodo+" "+tipo;
-        mascotas.add(mascota);
+        mascotas.add(m);
+        
+        return m;
     }
             
     
     public void mostrarMascotas(){
         System.out.println("Las mascotas son ");
-        for (String aux : mascotas) {
+        for (Mascota aux : mascotas) {
             
-            System.out.println(aux);
+            System.out.println(aux.toString());
             
         }
         System.out.println("cantidad = "+mascotas.size());
     }
             
+    
+    public void fabricaChiquitos(int cantidad) {
+        
+        for (int i = 0; i < cantidad; i++) {
+            
+            mascotas.add(new Mascota("Fer", "Chiquito", "Beagle"));
+            
+        }
+    }
+    
+    public void fabricaMascota(int cantidad){
+        for (int i = 0; i < cantidad; i++) {
+            Mascota mascotaCreada = crearMascota(); 
+            
+            System.out.println(mascotaCreada.toString());
+        }
+    }
 }
