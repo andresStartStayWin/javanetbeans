@@ -25,10 +25,15 @@ public class MascotAPP {
 
         ServicioMascotas servMasc = new ServicioMascotas();
         
-       servMasc.fabricaMascota(2);
-       
-       servMasc.mostrarMascotas();
+      servMasc.fabricaMascota(2);
+      
+      servMasc.mostrarMascotas();
+      
+      servMasc.actualizarMascota(0);
+      servMasc.mostrarMascotas();
         
+      servMasc.eliminarMascota();
+      servMasc.mostrarMascotas();
         
         
         

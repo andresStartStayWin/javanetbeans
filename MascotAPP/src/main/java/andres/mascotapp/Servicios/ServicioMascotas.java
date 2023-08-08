@@ -33,11 +33,12 @@ public class ServicioMascotas {
         System.out.println("tipo");
         String tipo = leer.next();
               
-        Mascota m = new Mascota(nombre, apodo, tipo);   
+        return new Mascota(nombre, apodo, tipo);   
         
+    }
+    
+    public void agregarMascota(Mascota m) {
         mascotas.add(m);
-        
-        return m;
     }
             
     
@@ -65,7 +66,36 @@ public class ServicioMascotas {
         for (int i = 0; i < cantidad; i++) {
             Mascota mascotaCreada = crearMascota(); 
             
+            agregarMascota(mascotaCreada);
+            
             System.out.println(mascotaCreada.toString());
         }
     }
+   
+    /*
+    public void actualizarMascota(int index){
+        Mascota m = mascotas.get(index);
+        m.setApodo("R");
+    
+    }
+    */
+    
+    public void actualizarMascota(int index){
+        
+        if (index<=(mascotas.size()-1)) {
+        System.out.println("");
+        System.out.println("Actualizar");
+        
+        Mascota m = crearMascota();
+        
+        mascotas.set(index, m);
+            
+        } else {
+            System.out.println("Indice erroneo");
+        }
+    }
+
+   public void eliminarMascota() {
+       mascotas.remove(0);
+   }
 }
