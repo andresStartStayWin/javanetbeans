@@ -4,7 +4,10 @@
 package andres.mascotapp;
 
 import andres.mascotapp.Servicios.ServicioMascotas;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  *
@@ -23,47 +26,23 @@ public class MascotAPP {
 
     public static void main(String[] args) {
 
-        ServicioMascotas servMasc = new ServicioMascotas();
-        
-      servMasc.fabricaMascota(2);
-      
-      servMasc.mostrarMascotas();
-      
-      servMasc.actualizarMascota(0);
-      servMasc.mostrarMascotas();
-        
-      servMasc.eliminarMascota();
-      servMasc.mostrarMascotas();
-        
-        
-        
-        /*
-       String[] nombresArray = new String[5];
-       
-        for (int i = 0; i < nombresArray.length; i++) {
-            nombresArray[i] = "Chiquito "+(i+1);
-            
-        }
-        
-        for (String var : nombresArray) {
-            System.out.println(var);
+    List<String> nombres = new ArrayList();
+    nombres.add("Lola");
+    nombres.add("Rodman");
+    nombres.add("Chiquito");
+    
+        for (String aux : nombres) {
+            if (aux.equals("Lola")) {
+                nombres.remove(aux);
+            }
             
         }
 
+//        for (int i = 0; i < nombres.size(); i++) {
+//            System.out.println(nombres.get(i));
+//            
+//        }
 
-    ArrayList<String> nombresArrayList = new ArrayList();
 
-    nombresArrayList.add("Chiquito");
-    nombresArrayList.add("Chiquito");
-    nombresArrayList.add("Chiquito");
-    
-        System.out.println(nombresArrayList.size());
-        
-        
-        nombresArrayList.remove("Chiquito");
-        System.out.println(nombresArrayList.size());
-        */
 }
-    
-    
-}
+} 

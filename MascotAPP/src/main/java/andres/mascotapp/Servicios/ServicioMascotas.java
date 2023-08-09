@@ -91,11 +91,17 @@ public class ServicioMascotas {
         mascotas.set(index, m);
             
         } else {
-            System.out.println("Indice erroneo");
+            System.out.println("No actualizó, Indice erroneo");
         }
     }
 
-   public void eliminarMascota() {
-       mascotas.remove(0);
+    public void eliminarMascota(int index) {
+       
+         if (index<=(mascotas.size()-1)) {
+        mascotas.remove(index);
+            
+        } else {
+            System.out.println("No eliminó, Indice erroneo");
+        }
    }
 }
