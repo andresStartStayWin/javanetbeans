@@ -3,46 +3,43 @@
  */
 package andres.mascotapp;
 
-import andres.mascotapp.Servicios.ServicioMascotas;
-import java.lang.reflect.Array;
+import andres.mascotapp.entidades.Mascota;
+import andres.mascotapp.entidades.Usuario;
+import andres.mascotapp.enumeraciones.RazaGatuna;
+import andres.mascotapp.enumeraciones.RazaPerruna;
+import andres.mascotapp.enumeraciones.SexoHumano;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
-/**
- *
- * @author andre
- *  Scanner leer = new Scanner(System.in);
-        
-        Mascota m1 = new Mascota("Fernando Chiquito", "Chiquito", "Perro");
 
-        m1.setNombre("Pepe Chiquito");
-        
-        m1.pasear(100);
-        
-        System.out.println(m1.toString());
- */
 public class MascotAPP {
 
+    /**
+     *
+     * @param args
+     */
+    
     public static void main(String[] args) {
 
-    List<String> nombres = new ArrayList();
-    nombres.add("Lola");
-    nombres.add("Rodman");
-    nombres.add("Chiquito");
-    
-        for (String aux : nombres) {
-            if (aux.equals("Lola")) {
-                nombres.remove(aux);
-            }
-            
-        }
+        
+       Mascota m1 = new Mascota("Fer", "Chiquito", "Perro");
+       
+       Mascota m2 = new Mascota("Pepa", "Filo", "Perro");
+       
+       List<Mascota> mascotas = new ArrayList();
+       mascotas.add(m1);
+       mascotas.add(m2);
+       
+       Usuario u = new Usuario();
+       u.setApellido("Fiorde");
+       u.setSexo(SexoHumano.HOMBRE);
+       u.setNacimiento(new Date("01/11/1991"));
+       
+       u.setMascotaFavorita(m1);
+       
+       u.setMascotas(mascotas);
 
-//        for (int i = 0; i < nombres.size(); i++) {
-//            System.out.println(nombres.get(i));
-//            
-//        }
-
-
-}
+        System.out.println(u.toString());
+    }       
 } 
