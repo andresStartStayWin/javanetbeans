@@ -11,6 +11,7 @@ package herenciaej2electrodom;
 
 import Servicios.LavadoraServicio;
 import Servicios.TvServicio;
+import Servicios.ElectrodomesticoServicio;
 import java.util.Scanner;
 
 public class Main {
