@@ -12,19 +12,21 @@ package Entidades;
 
 public class Electrodomestico {
 
-    protected double precio, peso;
-    protected String color, consumoEnergetico;
+    protected double precio, peso, consumoEnergetico;
+    protected String color;
 
     public Electrodomestico() {
     }
 
-    public Electrodomestico(double precio, double peso, String color, String consumoEnergetico) {
+    public Electrodomestico(double precio, double peso, double consumoEnergetico, String color) {
         this.precio = precio;
         this.peso = peso;
-        this.color = color;
         this.consumoEnergetico = consumoEnergetico;
+        this.color = color;
     }
 
+    
+    
     public double getPrecio() {
         return precio;
     }
@@ -41,6 +43,14 @@ public class Electrodomestico {
         this.peso = peso;
     }
 
+    public double getConsumoEnergetico() {
+        return consumoEnergetico;
+    }
+
+    public void setConsumoEnergetico(double consumoEnergetico) {
+        this.consumoEnergetico = consumoEnergetico;
+    }
+
     public String getColor() {
         return color;
     }
@@ -49,12 +59,12 @@ public class Electrodomestico {
         this.color = color;
     }
 
-    public String getConsumoEnergetico() {
-        return consumoEnergetico;
+    @Override
+    public String toString() {
+        return "Electrodomestico{" + "precio=" + precio + ", peso=" + peso + ", consumoEnergetico=" + consumoEnergetico + ", color=" + color + '}';
     }
-
-    public void setConsumoEnergetico(String consumoEnergetico) {
-        this.consumoEnergetico = consumoEnergetico;
-    }
-
+ 
+    
+    
 }
+

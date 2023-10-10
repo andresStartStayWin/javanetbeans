@@ -9,6 +9,7 @@ package herenciaej2electrodom;
  * @author andre
  */
 
+import Entidades.Electrodomestico;
 import Servicios.LavadoraServicio;
 import Servicios.TvServicio;
 import Servicios.ElectrodomesticoServicio;
@@ -18,6 +19,11 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Electrodomestico e1 = new Electrodomestico(150,500,111, "Rojo");
+        
+        System.out.println(e1);
+        
+   /*
         Scanner input = new Scanner(System.in);
 
         LavadoraServicio lavSer = new LavadoraServicio();
@@ -41,5 +47,7 @@ public class Main {
         System.out.println("\nTelevisor en stock:");
         tvSer.mostrarTelevisores();
 
+*/
     }
+
 }
