@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+
 /**
  *
  * @author andre
@@ -57,13 +58,27 @@ public abstract class DAO {
         }
     }
     
-    protected void insertarModificarEliminar(String sql) {
+    protected void insertarModificarEliminar(String sql) throws Exception {
         try {
             conectarBase();
             sentencia = conexion.createStatement();
             sentencia.executeUpdate(sql);
             
-        } catch (Exception e) {
+        } catch (SQLException | ClassNotFoundException ex) {
+            throw ex;
+        } finally {
+            desconectarBase();
         }
     }
+    
+    protected void consultarBase(String sql) throws Exception {
+        try {
+            conectarBase();
+            sentencia = conexion.createStatement();
+            resultado = sentencia.executeQuery(sql);
+            
+        } catch (Exception ex) {
+            throw ex;
+        }
+}
 }
